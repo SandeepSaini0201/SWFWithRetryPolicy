@@ -8,6 +8,6 @@ import com.amazonaws.services.simpleworkflow.flow.annotations.WorkflowRegistrati
 @WorkflowRegistrationOptions(defaultExecutionStartToCloseTimeoutSeconds = 3600)
 public interface IHelloWorldWorkflow {
 
-    @Execute(version = "1.7")
+    @Execute(version = "1.0")
     void greet();
 }
