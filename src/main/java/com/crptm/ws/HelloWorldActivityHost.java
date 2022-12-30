@@ -14,7 +14,7 @@ public class HelloWorldActivityHost {
                 .withRegion(Regions.US_EAST_1)
                 .build();
 
-        SpringActivityWorker springActivityWorker = new SpringActivityWorker(amazonSimpleWorkflow, "LuckyMe", "NewLuckyMe");
+        SpringActivityWorker springActivityWorker = new SpringActivityWorker(amazonSimpleWorkflow, "HelloWorld", "HelloWorldTask");
         springActivityWorker.addActivitiesImplementation(new HelloWorldActivityImpl());
         springActivityWorker.start();
     }

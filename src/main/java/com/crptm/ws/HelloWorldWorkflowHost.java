@@ -14,8 +14,8 @@ public class HelloWorldWorkflowHost {
                 .withRegion(Regions.US_EAST_1)
                 .build();
 
-        SpringWorkflowWorker springWorkflowWorker = new SpringWorkflowWorker(amazonSimpleWorkflow, "LuckyMe", "NewLuckyMe");
-        springWorkflowWorker.addWorkflowImplementation(new CronWithRetryWorkflowImpl());
+        SpringWorkflowWorker springWorkflowWorker = new SpringWorkflowWorker(amazonSimpleWorkflow, "HelloWorld", "HelloWorldTask");
+        springWorkflowWorker.addWorkflowImplementation(new HelloWorldWorkflowImpl());
         springWorkflowWorker.start();
     }
 }
